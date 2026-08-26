@@ -1,7 +1,8 @@
 // src/services/apiService.js
 import axios from "axios";
 
-const BASE_URL = "https://b2bpartnership.com/api/api/admin/v1/";
+// const BASE_URL = "https://b2bpartnership.com/api/api/admin/v1/";
+ const BASE_URL = "http://localhost:8000/api/admin/v1/"; // Use this for local development
 
 const api = axios.create({
   baseURL: BASE_URL,
