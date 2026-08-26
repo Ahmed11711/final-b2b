@@ -35,13 +35,13 @@ export const CategoryFields = [
     type: "text",
     cell_type: "text",
     display_field: null,
-    required: 1,
+    required: 0,
     placeholder: "Enter Name Ar",
-    searchable: false,
+    searchable: true,
     filterable: false,
     sortable: false,
-    table_show: false,
-    form_show: false,
+    table_show: true,
+    form_show: true,
     options: null
   },
   {
@@ -70,8 +70,8 @@ export const CategoryFields = [
     searchable: false,
     filterable: false,
     sortable: true,
-    table_show: true,
-    form_show: true,
+    table_show: false,
+    form_show: false,
     options: null
   },
   {

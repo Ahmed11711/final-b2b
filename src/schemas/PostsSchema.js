@@ -47,17 +47,17 @@ export const PostsFields = [
     options: null
   },
   { 
-    key: "user.image", 
-    label: "image", 
-    type: "file", 
+    key: "user", 
+    label: "text", 
+    type: "image", 
     cell_type: "image",
     display_field: "user.image",
     required: 0, 
     placeholder: "Enter Image",
     searchable: false,
     filterable: false,
-    sortable: true,
-    table_show: true,
+    sortable: false,
+    table_show: false,
     form_show: false,
     options: null
   },

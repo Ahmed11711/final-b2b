@@ -34,8 +34,8 @@ export const ProviderFields = [
     options: null
   },
   {
-    key: "name",
-    label: "Name",
+    key: "user_name",
+    label: "Provider Name",
     type: "text",
     cell_type: "text",
     display_field: null,
@@ -92,7 +92,7 @@ export const ProviderFields = [
     filterable: false,
     sortable: true,
     table_show: false,
-    form_show: true,
+    form_show: false,
     options: null
   },
   {
@@ -145,6 +145,7 @@ export const ProviderFields = [
   label: "Services",
   cell_type: "relation_list",
   view_show: true,
+    form_show: false,
 
   tab: true,
   headers: [
@@ -163,6 +164,8 @@ export const ProviderFields = [
   label: "my-contacts",
   cell_type: "relation_list",
   view_show: true,
+      form_show: false,
+
   tab: true,  
   headers: [
 { key: "id", label: "ID", format: "short_id" },
@@ -180,6 +183,8 @@ export const ProviderFields = [
   label: "my-project",
   cell_type: "relation_list",
   view_show: true,
+      form_show: false,
+
   tab: true,  
   headers: [
 { key: "id", label: "ID", format: "short_id" },
@@ -198,6 +203,8 @@ export const ProviderFields = [
   label: "my-certificates",
   cell_type: "relation_list",
   view_show: true,
+      form_show: false,
+
   tab: true,  
   headers: [
 { key: "id", label: "ID", format: "short_id" },
@@ -215,6 +222,8 @@ export const ProviderFields = [
   label: "my-packages",
   cell_type: "relation_list",
   view_show: true,
+      form_show: false,
+
   tab: true,  
   headers: [
 { key: "id", label: "ID", format: "short_id" },
@@ -232,6 +241,8 @@ export const ProviderFields = [
   label: "my-branches",
   cell_type: "relation_list",
   view_show: true,
+      form_show: false,
+
   tab: true,  
   headers: [
 { key: "id", label: "ID", format: "short_id" },
@@ -249,6 +260,8 @@ export const ProviderFields = [
   label: "my-verification",
   cell_type: "relation_list",
   view_show: true,
+      form_show: false,
+
   tab: true,  
   headers: [
 { key: "id", label: "ID", format: "short_id" },

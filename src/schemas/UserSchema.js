@@ -100,13 +100,13 @@ export const UserFields = [
   },
   { 
     key: "user_name", 
-    label: "User Name", 
+    label: "Provider Name", 
     type: "text", 
     view_show: true, 
     cell_type: "text",
     display_field: null,
     required: 0, 
-    placeholder: "Enter User Name",
+    placeholder: "Enter Provider Name",
     searchable: false,
     filterable: false,
     sortable: true,
@@ -130,21 +130,7 @@ export const UserFields = [
     form_show: false,
     options: null
   },
-  { 
-    key: "country_code", 
-    label: "Country Code", 
-    type: "text", 
-    cell_type: "text",
-    display_field: null,
-    required: 1, 
-    placeholder: "Enter Country Code",
-    searchable: false,
-    filterable: false,
-    sortable: true,
-    table_show: false,
-    form_show: true,
-    options: null
-  },
+ 
   { 
     key: "is_active", 
     label: "Is Active", 
@@ -206,23 +192,7 @@ export const UserFields = [
     options: [{ label: "Google", value: 'google' }, { label: "Apple", value: 'apple' }, { label: "Facebook", value: 'facebook' }]
   },
   
-  { 
-    key: "city_id", 
-    label: "City Id", 
-    type: "select", 
-    cell_type: "relation",
-    display_field: "city.name",
-    required: 0, 
-    placeholder: "Enter City Id",
-    searchable: false,
-    filterable: true,
-    sortable: true,
-    table_show: false,
-    form_show: true,
-    endpoint: 'cities',
-    relation_fields: 'id,name_en',
-    options: { label: 'name_en', value: 'id' }
-  },
+ 
   { 
     key: "info", 
     label: "Info", 

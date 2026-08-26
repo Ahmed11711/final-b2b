@@ -63,25 +63,26 @@ export const CustomerFields = [
     form_show: true,
     options: null
   },
-   
-  
-  {
-    key: "package_name",
-    label: "Package",
+    {
+    key: "phone",
+    label: "phone",
     type: "text",
     cell_type: "text",
     display_field: null,
     required: 0,
-    placeholder: "",
+    placeholder: "Enter phone",
     searchable: false,
     filterable: false,
-    sortable: false,
+    sortable: true,
     table_show: true,
-    form_show: false,
+    form_show: true,
     options: null
   },
+   
+  
+   
   {
-    key: "posts",
+    key: "posts_count",
     label: "Count posts",
     type: "text",
     cell_type: "text",
@@ -95,21 +96,21 @@ export const CustomerFields = [
     form_show: false,
     options: null
   },
-  {
-    key: "reviews_count",
-    label: "Applay Count",
-    type: "text",
-    cell_type: "text",
-    display_field: null,
-    required: 0,
-    placeholder: "",
-    searchable: false,
-    filterable: false,
-    sortable: true,
-    table_show: true,
-    form_show: false,
-    options: null
-  },
+  // {
+  //   key: "reviews_count",
+  //   label: "Applay Count",
+  //   type: "text",
+  //   cell_type: "text",
+  //   display_field: null,
+  //   required: 0,
+  //   placeholder: "",
+  //   searchable: false,
+  //   filterable: false,
+  //   sortable: true,
+  //   table_show: true,
+  //   form_show: false,
+  //   options: null
+  // },
   {
     key: "is_active",
     label: "Is Active",
@@ -145,6 +146,8 @@ export const CustomerFields = [
   label: "my-posts",
   cell_type: "relation_list",
   view_show: true,
+      form_show: false,
+
   tab: true,  
   headers: [
  {key: "id", label: "ID", format: "short_id" },
@@ -166,6 +169,7 @@ export const CustomerFields = [
   label: "my-contacts",
   cell_type: "relation_list",
   view_show: true,
+   form_show: false,
   tab: true,  
   headers: [
 { key: "id", label: "ID", format: "short_id" },
