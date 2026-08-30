@@ -1,4 +1,6 @@
 {
+ "All verification": "طلبات التوثيق",
+ "Verification": "طلبات التوثيق",
   "login": {
     "welcome": "مرحباً بك مجدداً",
     "sign_in_to_manage": "قم بتسجيل الدخول لإدارة لوحة تحكم مزود الخدمة الخاص بك.",
@@ -29,7 +31,8 @@
     "settings": "الإعدادات",
     "app": "إعدادات التطبيق",
     "my_tasks": "مهامي",
-    "sign_out": "تسجيل الخروج"
+    "sign_out": "تسجيل الخروج",
+    "Verification": "التحقق"
   },
   "header": {
     "notifications": "الإشعارات",
@@ -37,6 +40,11 @@
     "mark_as_read": "تحديد الكل كمقروء"
   },
   "dashboard": {
+    "Customers": "العملاء",
+    "titleService": "الخدمات",
+    "date": "التاريخ",
+    "price": "السعر",
+    "status": "الحالة",
     "welcome": "مرحباً بك مجدداً",
     "operations_analytics": "العمليات والتحليلات",
     "staff_dashboard": "لوحة تحكم الموظفين",
@@ -46,7 +54,7 @@
     "active_services": "الخدمات النشطة",
     "pending_bookings": "الحجوزات المعلقة",
     "recent_bookings": "الحجوزات الأخيرة",
-    "recent_posts": "المشاركات الأخيرة",
+"recent_posts": " المنشورات الأخيرة",
     "revenue_overview": "نظرة عامة على الإيرادات",
     "weekly_revenue": "الإيرادات الأسبوعية",
     "quick_actions": "إجراءات سريعة",

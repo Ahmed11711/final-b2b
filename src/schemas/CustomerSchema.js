@@ -159,8 +159,8 @@ export const CustomerFields = [
 { key: "is_active", label: "is_active", },
     { key: "created_at", label: "Date" },
   ],
-  view_route: "/services/view/:id",    
-  edit_route: "/services/edit/:id", 
+  view_route: "/Posts/view/:id",    
+  edit_route: "/Posts/edit/:id", 
   filterKey: "user_id",
 },
 

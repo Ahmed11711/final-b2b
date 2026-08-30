@@ -122,8 +122,8 @@ export default function App() {
         <Route path="/Posts/view/:id" element={<ProtectedRoute><GenericViewPage entityName="postss" fields={PostsFields} title="Category Item Details" /></ProtectedRoute>} />
 {/* posts  Routes */}
         <Route path="/Subscribe" element={<ProtectedRoute><SubscribePage /></ProtectedRoute>} />
-        <Route path="/Subscribe/edit/:id" element={<ProtectedRoute><GenericFormPage endpoint="postss" fields={UserPacakgesFields} mode="edit" title="Edit Subscribe Item" /></ProtectedRoute>} />
-        <Route path="/Subscribe/view/:id" element={<ProtectedRoute><GenericViewPage entityName="postss" fields={UserPacakgesFields} title="Subscribe Item Details" /></ProtectedRoute>} />
+        <Route path="/Subscribe/edit/:id" element={<ProtectedRoute><GenericFormPage endpoint="user_pacakges" fields={UserPacakgesFields} mode="edit" title="Edit Subscribe Item" /></ProtectedRoute>} />
+        <Route path="/Subscribe/view/:id" element={<ProtectedRoute><GenericViewPage entityName="user_pacakges" fields={UserPacakgesFields} title="Subscribe Item Details" /></ProtectedRoute>} />
 
 
  {/* Packages Routes */}

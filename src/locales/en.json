@@ -12,6 +12,7 @@
     "login_failed": "Login failed. Please check your credentials."
   },
   "sidebar": {
+    "verification": "Verification",
     "overview": "Overview",
     "user": "User",
     "provider": "Provider",
@@ -38,6 +39,11 @@
     "mark_as_read": "Mark all as read"
   },
   "dashboard": {
+      "Customers": "Customers",
+    "titleService": "Services",
+    "date": "Date",
+    "price": "Price",
+    "status": "Status",
     "welcome": "Welcome back",
     "operations_analytics": "Operations & Analytics",
     "staff_dashboard": "Staff Dashboard",

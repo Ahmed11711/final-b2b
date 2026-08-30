@@ -62,47 +62,54 @@ setRecentPosts(bookingsRes.data);
 
     loadData();
 }, []);
-  const columns = [
-    {
-      header: t("common.title"),
-      accessor: (p: any) => (
-        <span className="font-semibold text-carbon-black">
-          {p.title || p.user_name || t("common.untitled_post")}
-        </span>
-      ),
+const columns = [
+  {
+    header: t('dashboard.Customers'),
+    accessor: (booking: any) => (
+      <span className="font-semibold text-carbon-black">
+        {booking.customer_name || "N/A"}
+      </span>
+    ),
+  },
+  {
+    header: t("dashboard.titleService"),
+    accessor: (booking: any) =>
+      booking.service?.service_name || "N/A",
+  },
+  {
+    header: t("dashboard.date"),
+
+    accessor: (booking: any) =>
+      booking.booking_date
+        ? new Date(booking.booking_date).toLocaleDateString()
+        : "N/A",
+  },
+  {
+    header: t("dashboard.price"),
+    accessor: (booking: any) =>
+      formatCurrency(booking.total_price || 0),
+  },
+  {
+    header: t("dashboard.status"),
+    accessor: (booking: any) => {
+      const status = booking.status;
+
+      return (
+        <Badge
+          variant={
+            status === "confirmed"
+              ? "success"
+              : status === "cancelled"
+                ? "error"
+                : "warning"
+          }
+        >
+          {status}
+        </Badge>
+      );
     },
-    {
-      header: t("common.author"),
-      accessor: (p: any) => p.author?.user_name || p.user?.user_name || t("common.admin"),
-    },
-    {
-      header: t("common.date"),
-      accessor: (p: any) => p.created_at ? new Date(p.created_at).toLocaleDateString() : t("common.na"),
-    },
-    {
-      header: t("common.status"),
-      accessor: (p: any) => {
-        const isActive = p.is_active !== undefined ? p.is_active : p.status;
-        return (
-          <Badge
-            variant={
-              isActive === 1 || isActive === "active"
-                ? "success"
-                : isActive === 0 || isActive === "inactive"
-                  ? "error"
-                  : "warning"
-            }
-          >
-            {isActive === 1 || isActive === "active" 
-              ? t("fields.active") 
-              : isActive === 0 || isActive === "inactive" 
-                ? t("fields.inactive") 
-                : t("common.undefined")}
-          </Badge>
-        );
-      },
-    },
-  ];
+  },
+];
 
   if (isLoading) {
     return (

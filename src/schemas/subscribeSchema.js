@@ -31,13 +31,13 @@ export const UserPacakgesFields  = [
   },
  
 { 
-    key: "user.image", 
-    label: "Image", 
-    type: "file", 
-    cell_type: "image",
+    key: "user.email", 
+    label: "Email", 
+    type: "text", 
+    cell_type: "text",
     display_field: null,
     required: 1, 
-    placeholder: "Enter Image",
+    placeholder: "Enter Email",
     searchable: false,
     filterable: false,
     sortable: true,
