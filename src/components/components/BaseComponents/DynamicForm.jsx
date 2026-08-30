@@ -9,6 +9,7 @@ export default function DynamicForm({
   title,
   initialData,
   mode,
+  onFieldChange, // ✅ ضفناها عشان نبلّغ الصفحة الأب لما أي حقل يتغيّر
 }) {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({});
@@ -40,6 +41,9 @@ export default function DynamicForm({
   const handleChange = (key, value) => {
     setFormData((prev) => ({ ...prev, [key]: value }));
     if (errors[key]) setErrors((prev) => ({ ...prev, [key]: null }));
+
+    // ✅ نبلّغ الصفحة الأب إن الحقل اتغيّر (مهم لفلترة الفئات حسب الحقيبة)
+    if (onFieldChange) onFieldChange(key, value);
   };
 
   const handleSubmit = async (e) => {

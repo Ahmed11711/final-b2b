@@ -57,6 +57,17 @@ export default function FormFieldRendererLayout({
     }
   }, [field?.key]);
 
+  // ✅ لما field.options يكون array (زي bag_id أو bags_categories_id اللي
+  // بيتحقنوا من الصفحة الأب)، لازم نزامن الـ local state معاه كل ما يتغيّر،
+  // مش بس أول مرة الكومبوننت يعمل mount. من غير ده، لما تختار حقيبة والصفحة
+  // الأب تبعت array جديدة بالفئات المفلترة، الكومبوننت هيفضل عارض الـ options
+  // القديمة (غالبًا فاضية) لأنه مش بيسمع أي تغيير.
+  useEffect(() => {
+    if (Array.isArray(field?.options)) {
+      setOptions(field.options);
+    }
+  }, [field?.options]);
+
   if (!field) return null;
 
   const isFullWidth =

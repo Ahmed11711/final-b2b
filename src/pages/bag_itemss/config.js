@@ -93,8 +93,8 @@ export const bagItemsFields = [
   {
     key: "price",
     label: "Price",
-    type: "text",
-    cell_type: "text",
+    type: "number",
+    cell_type: "number",
     required: 1,
     placeholder: "Enter Price",
     searchable: false,
@@ -139,8 +139,8 @@ export const bagItemsFields = [
   {
     key: "rating",
     label: "Rating",
-    type: "text",
-    cell_type: "text",
+    type: "rating",
+    cell_type: "rating",
     required: 0,
     placeholder: "Enter Rating",
     searchable: false,
@@ -179,7 +179,7 @@ export const bagItemsFields = [
     options: null,
   },
   {
-    key: "text",
+    key: "Whose",
     label: "Whose",
     type: "textarea",
     cell_type: "text",

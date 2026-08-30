@@ -39,6 +39,7 @@ import PackagesFormPage from "./pages/Packages_new/PackagesFormPage";
 import PackagesViewPage from "./pages/Packages_new/PackagesViewPage";
 import VerificationPage from "./pages/verification/VerificationPage";
 import {VerificationFields} from "./schemas//verificationSchema"
+import { bagItemsFields } from "./pages/bag_itemss/config";
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const token = localStorage.getItem("token");
@@ -85,8 +86,8 @@ export default function App() {
         <Route path="/bags_categories/view/:id" element={<ProtectedRoute><GenericViewPage entityName="bags_categories" fields={BagsCategoryFields} title="Category Details" /></ProtectedRoute>} />
 
          <Route path="/bag_items" element={<ProtectedRoute><Bag_itemsPage /></ProtectedRoute>} />
-        <Route path="/bag_items/edit/:id" element={<ProtectedRoute>< BagItemsFormPage mode="edit" /></ProtectedRoute>} />
-        <Route path="/bag_items/view/:id" element={<ProtectedRoute><BagItemsViewPage /></ProtectedRoute>} />
+        <Route path="/bag_items/edit/:id" element={<ProtectedRoute><GenericFormPage endpoint="bag_items" fields={bagItemsFields} mode="edit" title="Edit Bag Item" /></ProtectedRoute>} />
+        <Route path="/bag_items/view/:id" element={<ProtectedRoute><GenericViewPage entityName="bag_items" fields={bagItemsFields} title="Bag Item Details" /></ProtectedRoute>} />
         
 
         {/* User  Routes */}
